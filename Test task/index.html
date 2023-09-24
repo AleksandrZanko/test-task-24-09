@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестовое задание Занько Александра</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="form__wrapper">
+      <form action="#" class="form">
+        <div class="tab1">
+          <div class="form__header">
+            <h2 class="form__subtitle">Возраст</h2>
+            <span class="form__page-number"
+              ><span class="form__page-number--current">1</span>/3</span
+            >
+          </div>
+          <div class="form__age">
+            <span class="form__age-result">27 лет</span>
+            <input
+              class="form__age-range"
+              type="range"
+              id="age"
+              name="age"
+              min="18"
+              max="35"
+              step="1"
+              value="27"
+            />
+            <div class="form__age-text-wrapper">
+              <span class="form__age-text-start">18 лет</span>
+              <span class="form__age-text-finish">35 лет</span>
+            </div>
+          </div>
+          <div class="form__sex">
+            <h2 class="form__subtitle">Пол</h2>
+            <div class="form__sex-text-wrapper">
+              <div class="form__sex-men">
+                <input
+                  class="form__sex-radio"
+                  type="radio"
+                  id="men"
+                  name="sex"
+                />
+                <label class="form__sex-label" for="men">мужчина</label>
+              </div>
+              <div class="form__sex-woman">
+                <input
+                  class="form__sex-radio"
+                  type="radio"
+                  id="woman"
+                  name="sex"
+                />
+                <label class="form__sex-label" for="woman">женщина</label>
+              </div>
+            </div>
+          </div>
+          <div class="tab1-buttons-wrapper">
+            <button class="form__button tab1__button" type="button" disabled>
+              Далее
+            </button>
+          </div>
+        </div>
+        <div class="tab2">
+          <div class="form__header">
+            <h2 class="form__subtitle">Город</h2>
+            <span class="form__page-number"
+              ><span class="form__page-number--current">2</span>/3</span
+            >
+          </div>
+          <div class="form__city">
+            <select class="form__city-select" name="city" id="city" required>
+              <option value="Minsk">Минск</option>
+              <option value="Brest">Брест</option>
+              <option value="Vitebsk">Витебск</option>
+              <option value="Mogilev">Могилёв</option>
+              <option value="Grodno">Гродно</option>
+              <option value="Gomel">Гомель</option>
+            </select>
+          </div>
+          <div class="form__message">
+            <h2 class="form__subtitle">Сообщение</h2>
+            <textarea
+              class="form__message-text"
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Количество символов не более 370"
+              max-length="370"
+              required
+            ></textarea>
+          </div>
+          <div class="tab2-buttons-wrapper">
+            <button class="form__button--back tab2__back-button">Назад</button>
+            <button
+              class="form__button tab2__next-button"
+              type="button"
+              disabled
+            >
+              Далее
+            </button>
+          </div>
+        </div>
+        <div class="tab3">
+          <div class="form__header">
+            <h2 class="form__subtitle">Имя</h2>
+            <span class="form__page-number">
+              <span class="form__page-number--current">3</span>/3
+            </span>
+          </div>
+          <input class="form__name" type="text" />
+          <div class="form__phone-wrapper">
+            <h2 class="form__subtitle">Телефон</h2>
+            <input
+              class="form__phone"
+              id="phone"
+              type="tel"
+              placeholder="+375 (_ _) _ _ _ - _ _ - _ _"
+            />
+          </div>
+          <div class="form__rw">
+            <input class="form__rw-button" type="checkbox" id="rw" />
+            <label for="rw" class="form__rw-text">
+              Я согласен с политикой конфиденциальности
+            </label>
+          </div>
+          <div class="tab3-buttons-wrapper">
+            <button class="form__button--back tab3__back-button">Назад</button>
+            <button
+              class="form__button tab3__next-button"
+              type="submit"
+              disabled
+            >
+              Отправить заявку
+              <div class="form__button--loading"></div>
+            </button>
+          </div>
+        </div>
+        <div class="tab4">
+          <div class="tab4__wrapper">
+            <div class="form__title-wrapper">
+              <div class="form__title-icon"></div>
+              <h1 class="form__title">Ваша заявка успешно отправлена!</h1>
+            </div>
+            <div class="tab4-buttons-wrapper">
+              <button class="form__button form__button--finish" type="submit">
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
